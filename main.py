@@ -1,4 +1,5 @@
-from func import HelloNote,CreateNewNote,OpenNote,PrintAllNotes,Filter,ReadNote,ChangeNote,DeleteNote,CheckNote, Time,NewFilter,OldFilter,SaveNote
+
+from func import HelloNote,CreateNewNote,OpenNote,PrintAllNotes,Filter,ReadNote,DeleteNote,CheckNote,NewFilter,OldFilter,SaveNote
 
 num = HelloNote()
 if num == "1":
@@ -19,8 +20,9 @@ if num == "2":
     if res == "1":
         ReadNote(filename)
     elif res == "2":
+        ReadNote(filename)
         text = input("Введите новые данные: ")
-        print(filename)
         SaveNote(filename,text)
+        print("Данные успешно сохранены")
     elif res == "3":
         DeleteNote(filename)

@@ -78,7 +78,7 @@ def PrintAllNotes(list):
 
 def SaveNote(name,body):
         note = open("notes/"+name,"a")
-        note.write(body)
+        note.write("\n" + body)
         note.close()
 
 
