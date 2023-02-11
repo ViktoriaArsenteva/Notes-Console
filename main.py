@@ -8,12 +8,14 @@ if num == "1":
     while check == False:
         check,name = CheckNote(name,text,check)
     print("Данные успешно сохранены")
-if num == "2":
+elif num == "2":
     filt = Filter()
     if filt == "1":
         notes = NewFilter()
     elif filt == "2":
         notes = OldFilter()
+    else:
+        print("Введите корректный номер")
     noteId = PrintAllNotes(notes)
     filename = notes[noteId]
     res = OpenNote()
@@ -26,3 +28,7 @@ if num == "2":
         print("Данные успешно сохранены")
     elif res == "3":
         DeleteNote(filename)
+    else:
+        print("Введите корректный номер")
+else: 
+    print("Введите корректный номер")
